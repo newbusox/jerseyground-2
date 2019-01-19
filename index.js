@@ -116,4 +116,22 @@
             text.value = ""
         }
     })
+
+     document.getElementById('addy').onkeypress = function(e){
+        if (!e) e = window.event;
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == '13'){
+          // Enter pressed
+          window.open("https://benjaminshelley.typeform.com/to/AmrxvK", "_self")
+        }
+  }
+
+   document.getElementById('addy_top').onkeypress = function(e){
+        if (!e) e = window.event;
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == '13'){
+          // Enter pressed
+          window.open("https://benjaminshelley.typeform.com/to/AmrxvK", "_self")
+        }
+  }
 })

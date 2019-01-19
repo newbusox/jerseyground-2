@@ -96,11 +96,10 @@
 .index-card {
     background-color: rgba(235, 235, 235, 0.5);
     width: 30%;
-    box-shadow: 1px 5px 5px var(--grey);
-    border: 1px solid var(--grey);
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3);
     /* margin: 40px 40px; */
-
 }
+
 
 .head {
     background-color: var(--main-blue);   
@@ -143,7 +142,7 @@
 }
 
 .about {
-    padding: 10px 8% 4em 8%
+    padding: 100px 8% 150px 8%
 }
 
 #six {
