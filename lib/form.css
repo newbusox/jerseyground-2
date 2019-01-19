@@ -1,0 +1,71 @@
+.form {
+    background-color: white;
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.address-input {
+    background-color: transparent;
+    width: 300px;
+    border: none;
+    font-size: 18px;
+    padding: 2px 0px 2px 10px;
+    
+    /* font-size: 1rem; */
+}
+
+.button.send {
+    background-color: var(--main-blue);
+    width: 175px;
+    padding: 8px 20px 8px 17px; 
+    /* font-size: 12px; */
+    text-align: center;
+    color: white;
+}
+
+.nav-form {
+    border: 1px solid rgba(29, 29, 29, .2);
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 100% !important;
+}
+
+.nav-form > .address-input {
+    padding-left: 4px;
+}
+
+.nav-form > .button.send { 
+    padding: 11px;
+    border-radius: 0px 9px 9px 0px;
+}
+
+input:focus {
+    outline: none;
+}
+/* .nav-class {
+    transform: translateX(200px);
+    z-index: 200 !important;
+    position: fixed;
+    margin: 1% 0px 0px 0px !important;
+    width: 40% !important;
+    border: 1px solid var(--grey); 
+    text-align: center;
+    transition: all 1s ease-in-out;
+} */
+
+/* .address-input {
+    border-radius: 20px 0px 0px 20px; 
+    width: 260px;
+    padding: 16px 100px 16px 2px; 
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+}
+.button.send {
+    border-radius: 0px 20px 20px 0px; 
+    text-align: left;
+    padding: 16px 20px 16px 17px;
+    background-color: var(--main-color);
+    color: white;
+} */

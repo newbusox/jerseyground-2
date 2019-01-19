@@ -1,0 +1,57 @@
+.item {
+    margin-right: 10px;
+}
+
+a { 
+    text-decoration: none;
+    color: var(--main-blue);
+}
+
+a:visited {
+    color: var(--main-blue)
+}
+
+.nav {
+    display: flex;
+    height: 100px;
+    background-color: white;
+    font-family: 'Avenir Next Demi Bold';
+    z-index: 100;
+    color: var(--main-blue);
+    margin: 0;
+    font-size: 1 rem;
+}
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.first {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: start;
+    font-size: 1rem;
+    align-self: center;
+}
+
+.second {
+    grid-column-start: 4;
+    grid-column-end: 10;
+    opacity: 0;
+}
+
+.third {
+    grid-column-start: 10;
+    grid-column-end: 14;
+    justify-self: end;
+    /* align-self: end; */
+}

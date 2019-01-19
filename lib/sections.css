@@ -1,0 +1,151 @@
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+#one {
+    background-image: url('../assets/images/bg-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-content {
+    padding-top: 10%;
+    padding-left: 8%;
+}
+
+.width-set {
+    width: 55%
+}
+
+#two {
+    height: unset;
+    background-color: white;
+}
+
+.maxim-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+    grid-column-gap: 20px;
+    grid-template-areas:
+        "img1 img2 img3"
+        "img1 img2 img3"
+        "max1 max2 max3"
+        "desc1 desc2 desc3"
+}
+
+#img1 {
+    grid-area: img1;
+    align-self: center;
+    justify-self: center;
+}
+
+#img2 {
+    grid-area: img2;
+    align-self: center;
+    justify-self: center;
+}
+
+#img3 {
+    grid-area: img3;
+    align-self: center;
+    justify-self: center;
+}
+
+#max1 {
+    grid-area: max1;
+}
+
+#max2 {
+    grid-area: max2;
+}
+
+#max3 {
+    grid-area: max3;
+}
+
+#desc1 {
+    grid-area: desc1;
+}
+
+#desc2 {
+    grid-area: desc2;
+}
+
+#desc3 {
+    grid-area: desc3;
+}
+
+#three {
+    background-image: url('../assets/images/section-three-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.movie-background {
+    width: 100%; 
+    height: 100%;
+}
+
+.index-card {
+    background-color: rgba(235, 235, 235, 0.5);
+    width: 30%;
+    box-shadow: 1px 5px 5px var(--grey);
+    border: 1px solid var(--grey);
+    /* margin: 40px 40px; */
+
+}
+
+.head {
+    background-color: var(--main-blue);   
+    position: relative;
+    height: 15%;
+    width: 100%;
+}
+
+
+.process {
+    padding: 5% 0%;
+}
+
+.process-inner {
+    padding: 0% 8%;
+}
+
+#four {
+    background-color: var(--white); 
+    height: unset;
+}
+
+.number {
+    border: 1px solid var(--white);
+    border-radius: 200px;
+    padding: 4px 12px;
+    font-size: 22px;
+}
+
+#five {
+    height: unset;
+    background-image: url('../assets/images/section-three-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about-shade {
+    height: 100%;
+    width: 100%;
+}
+
+.about {
+    padding: 10px 8% 4em 8%
+}
+
+#six {
+    height: unset;
+}
