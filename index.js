@@ -79,13 +79,6 @@
         TweenMax.fromTo("#cal", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y:0, delay: 1.5})
     }
 
-    // function enterPlayer() {
-    //     // TweenMax.fromTo(".movie-background", 1, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 1 })
-    //     TweenMax.fromTo(".first-card", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 0.5 })
-    //     TweenMax.fromTo(".second-card", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 1 })
-    //     TweenMax.fromTo(".third-card", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 1.5 })
-    // }
-
     function enterProcess() {
         TweenMax.fromTo("#head-text", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 1 })
         TweenMax.fromTo("#first", 0.5, { opacity: 0, y: 25 }, { opacity: 1, y: 0, delay: 1.5 })
@@ -103,6 +96,9 @@
 
     function writeUserData(address) {
         console.log(firebase.database().ref('addresses-list/'))
+        mixpanel.track('Address Input', {
+            'Address': address,
+        });
         firebase.database().ref('addresses-list/').push({
             address
         }, () => window.open("https://jerseyground.typeform.com/to/AmrxvK", "_self"))
@@ -117,21 +113,23 @@
         }
     })
 
-     document.getElementById('addy').onkeypress = function(e){
-        if (!e) e = window.event;
-        var keyCode = e.keyCode || e.which;
-        if (keyCode == '13'){
-          // Enter pressed
-          window.open("https://benjaminshelley.typeform.com/to/AmrxvK", "_self")
-        }
-  }
+    $('.address-input').each(function() {
+        $(this).on('keypress', function(e){
+            if(e.which==13){
+                e.preventDefault();
+                writeUserData($(this).val());
+                $(this).val('');
+            }
+        })
+    });
 
-   document.getElementById('addy_top').onkeypress = function(e){
-        if (!e) e = window.event;
-        var keyCode = e.keyCode || e.which;
-        if (keyCode == '13'){
-          // Enter pressed
-          window.open("https://benjaminshelley.typeform.com/to/AmrxvK", "_self")
-        }
-  }
+    $('.item').each(function() {
+        $(this).on('click', function (e) {
+            mixpanel.track($(this).text());
+        })
+    });
+
 })
+
+
+
